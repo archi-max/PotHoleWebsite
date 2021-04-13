@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.getenv("DEBUG", "0")) == 1
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['']
 
 
 # Application definition
@@ -128,6 +128,6 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = None
-
+CSRF_COOKIE_SECURE = True
 import django_heroku
 django_heroku.settings(locals())

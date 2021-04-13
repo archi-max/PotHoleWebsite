@@ -1,1 +1,1 @@
-web: gunicorn PotHoleWebsite.wsgi --log-file -
+web: gunicorn PotHoleWebsite.wsgi
