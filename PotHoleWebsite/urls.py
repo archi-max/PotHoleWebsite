@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from datacollection.views import index, upload
+from datacollection.views import UploadFormView, IndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
-    path('upload', upload, name='upload')
+    path('', IndexView.as_view(), name='index'),
+    path('upload', UploadFormView.as_view(), name='upload')
 ]
