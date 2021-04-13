@@ -21,3 +21,6 @@ def path_to_file(instance, filename):
 class Data(models.Model):
     image = models.ImageField(upload_to=path_to_file, storage=gd_storage)
     username = models.CharField(max_length=128)
+
+    def __str__(self):
+        return self.username+"__" + str(self.image)
