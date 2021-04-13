@@ -1,0 +1,69 @@
+.bg-img{
+    background-size: 100vw 100vh;
+    background-color: black;
+}
+.nav-title{
+    color: #F2C94C;
+    font-size: 2.5rem;
+    font-family: 'Saira Semi Condensed';
+    letter-spacing: 0.08em;
+    line-height: 118%;
+    font-weight: 500;
+}
+.navbar-link{
+    color: #F2C94C;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+    font-family: 'Russo One';
+}
+.file-footer-buttons{
+    visibility: hidden;
+}
+.fileinput-remove {
+color: #fff;
+background-color: #dc3545;
+border-color: #dc3545;
+display: inline-block;
+font-weight: 400;
+line-height: 10px;
+text-align: center;
+text-decoration: none;
+vertical-align: middle;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+user-select: none;
+padding: 6;
+font-size: 1rem;
+border-radius: .25rem;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+top: 1px;
+right: 1px;
+}
+
+.fileinput-remove[tabindex="500"]{
+height: 100%;
+margin-left: 3px;
+}
+.file-drop-zone {
+border: none;
+min-height: 260px;
+border-radius: 4px;
+text-align: center;
+vertical-align: middle;
+margin: 12px 15px 12px 12px;
+padding: 5px;
+}
+@font-face {
+    font-family: 'Russo One';
+    src: url('../fonts/RussoOne-Regular.ttf');
+}
+@font-face {
+    font-family: 'Sansation';
+    src: url('../fonts/Sansation/Sansation_Regular.ttf');
+}
+@font-face {
+    font-family: 'Ruda';
+    src: url('../fonts/Ruda-VariableFont_wght.ttf');
+}
