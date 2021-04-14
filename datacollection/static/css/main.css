@@ -1,10 +1,10 @@
-body{
+.bg-img{
     background-size: 100vw 100vh;
     background-color: black;
     position: relative;
 }
 
-body::before {
+.bg-img::before {
     /* overlay, so that the text is clearly visible */
     content: '';
     background-color: rgba(36, 36, 36, 0.7);
