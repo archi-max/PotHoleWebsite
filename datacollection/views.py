@@ -2,12 +2,13 @@ from django.shortcuts import render
 from django.views.generic.edit import FormView
 from django.views.generic.base import TemplateView
 # Create your views here.
-from django import forms
+from .models import UploadForm
+from django.views.decorators.csrf import csrf_exempt
+
 from django.urls import reverse
 from .models import Data
 
-class UploadForm(forms.Form):
-    username = forms.CharField(max_length=128)
+
 
 class IndexView(TemplateView):
 
@@ -18,8 +19,7 @@ class UploadFormView(FormView):
 
     form_class = UploadForm
     template_name = "upload.html"
-    success_url ='/upload'
-
+    success_url = '/upload'
 
     def post(self, request, *args, **kwargs):
         print("post callled on upload")
@@ -37,9 +37,3 @@ class UploadFormView(FormView):
         else:
             return self.form_invalid(form)
 
-
-    # def form_valid(self, form):
-    #     pass
-    #
-    #
-    # def get(self, request): return render(request, 'upload.html', {'form':self.form()})

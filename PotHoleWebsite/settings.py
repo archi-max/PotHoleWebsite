@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'gdstorage'
+    'api.apps.ApiConfig',
+    'gdstorage',
+    'rest_framework',
 
 ]
 
@@ -131,3 +133,9 @@ GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = None
 CSRF_COOKIE_SECURE = True
 import django_heroku
 django_heroku.settings(locals())
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}

@@ -2,6 +2,7 @@ from django.db import models
 from gdstorage.storage import GoogleDriveStorage
 import os
 from uuid import uuid4
+from django import forms
 
 gd_storage = GoogleDriveStorage()
 
@@ -24,3 +25,6 @@ class Data(models.Model):
 
     def __str__(self):
         return self.username+"__" + str(self.image)
+
+class UploadForm(forms.Form):
+    username = forms.CharField(max_length=128, required=False)
