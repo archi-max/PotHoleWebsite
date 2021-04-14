@@ -17,7 +17,7 @@
     <body class="bg-img">
         
         
-        <nav class="navbar navbar-light bg-transparent">
+        <nav class="navbar navbar-light bg-transparent fixed-top">
             <div class="container-fluid">
               <a class="navbar-brand ps-4 pt-4" href="{% url 'index' %}">
                   <span class="nav-title">The Ardent</span>
@@ -36,17 +36,42 @@
 
             {% block body %}
 
-          <div class="container-fluid" style="margin-left: 15%;margin-top: 9rem;width: fit-content;">
+                <header>
+                    <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+
+                        <div class="carousel-inner" role="listbox">
+      <!-- Slide One - Set the background image for this slide in the line below -->
+                        <div class="carousel-item active" style="background-image: url({% static 'images/bg_pothole7.jpg' %})"></div>
+      <!-- Slide Two - Set the background image for this slide in the line below -->
+                        <div class="carousel-item" style="background-image: url({% static 'images/bg_pothole2.jpg' %})"></div>
+      <!-- Slide Three - Set the background image for this slide in the line below -->
+                            <div class="carousel-item" style="background-image: url({% static 'images/bg_pothole3.jpg' %})"></div>
+                            <div class="carousel-item" style="background-image: url({% static 'images/bg_pothole4.jpg' %})"></div>
+                            <div class="carousel-item" style="background-image: url({% static 'images/bg_pothole5.jpg' %})"></div>
+                            <div class="carousel-item" style="background-image: url({% static 'images/bg_pothole6.jpg' %})"></div>
+                            <div class="carousel-item" style="background-image: url({% static 'images/bg_pothole7.jpg' %})"></div>
+                        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  </div>
+</header>
+
+          <div class="container-fluid position-absolute" style="width: fit-content;top: 25vh; left: 25vw">
             <span class="text-white ms-5" style="font-size: 6rem;font-family: 'Sansation';font-weight: 700;">Pothole Tracker</span><br>
             <span class=" ms-5 pt-5" style="font-size: 2rem;font-family: 'Ruda';color: #F2C94C;">Tracking the craters on roads since 2021</span>
-            <div class="d-flex ms-5 justify-content-between" style="margin-top: 5rem;width: 70%;">
+            <div class="d-flex ms-5 " style="margin-top: 5rem;width: 70%;">
                 <a href="{% url 'upload' %}" class="btn text-white" style="background-color: #F2C94C;font-family: 'Russo One';">New Crater</a>
-                <button class="btn text-white" style="background-color: #F2C94C;font-family: 'Russo One';">Find Crater</button>
+                <button class="btn text-white" style="background-color: #F2C94C;font-family: 'Russo One';margin-left: 5%;">Find Crater</button>
 
             </div>
         </div>
 
-        <script src="{% static 'js/script.js' %}"></script>
         <script src="{% static 'vendor/jquery/jquery-3.6.0.min.js' %}"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
         {% endblock %}

@@ -67,3 +67,12 @@ padding: 5px;
     font-family: 'Ruda';
     src: url('../fonts/Ruda-VariableFont_wght.ttf');
 }
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
