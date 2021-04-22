@@ -76,3 +76,24 @@ padding: 5px;
   -o-background-size: cover;
   background-size: cover;
 }
+
+    .intro-headline {
+        font-size: 5rem;
+    }
+
+
+
+@media (max-width:1376px){
+    .intro-headline {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width:1124px){
+    .intro-headline {
+        font-size: 3rem;
+    }
+    .intro-subline {
+        font-size: 1.5rem;
+    }
+}
