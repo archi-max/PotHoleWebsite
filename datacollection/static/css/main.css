@@ -75,6 +75,7 @@ padding: 5px;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+    -webkit-filter: blur(6px);
 }
 
     .intro-headline {
