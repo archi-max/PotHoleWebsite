@@ -1,10 +1,16 @@
 from django.db import models
 from gdstorage.storage import GoogleDriveStorage
+from django.core.files.storage import FileSystemStorage
+
 import os
 from uuid import uuid4
 from django import forms
 
-gd_storage = GoogleDriveStorage()
+USE_GDRIVE =  False
+if USE_GDRIVE:
+    storage_backend = GoogleDriveStorage()
+else:
+    storage_backend = FileSystemStorage()
 
 # def path_and_rename(path):
 def path_to_file(instance, filename):
@@ -20,7 +26,7 @@ def path_to_file(instance, filename):
 
 # Create your models here.
 class Data(models.Model):
-    image = models.ImageField(upload_to=path_to_file, storage=gd_storage)
+    image = models.ImageField(upload_to=path_to_file, storage=storage_backend)
     username = models.CharField(max_length=128)
 
     def __str__(self):
